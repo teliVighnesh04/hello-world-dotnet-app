@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'dotnet' }
     
     parameters {
         choice(name: 'ENV', choices: ['UAT', 'PROD'], description: 'Choose environment to build for')
